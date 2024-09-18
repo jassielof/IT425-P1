@@ -20,6 +20,35 @@ La nomenclatura de investigación de artículos se rige de la siguiente forma (_
 - Año de Publicación
 - Fuente (Revista/Conferencia, Volumen, Número, Páginas)
 
+#let ficha(
+  título: [],
+  autores: [],
+  año: [],
+  fuente: [],
+  caption: [],
+) = {
+  [Se presenta la siguiente ficha de lectura del artículo científico:]
+  figure(
+    table(
+      columns: 2,
+      align: (right, left),
+      table.hline(),
+      table.header(
+        [Característica], [Descripción],
+      ),
+      table.hline(),
+      [Nombre del Estudiante], [Jassiel Ovando Franco],
+      [Fecha], datetime.today().display(),
+      [Título del Artículo], título,
+      [Autores], autores,
+      [Año de Publicación], año,
+      [Fuente], fuente,
+      table.hline(),
+    ),
+    caption: caption,
+  )
+}
+
 == Restricciones de los Artículos Científicos
 - No más de 3 en el mismo idioma
 - Normas APA
@@ -73,6 +102,8 @@ Más el contenido de cada artículo a investigar, se debe responder lo siguiente
   título: [],
   palabras-clave: [],
   fuente: [],
+  // ficha de investigación
+  tabla-ficha: [],
   // objetivos y preguntas
   objetivo: [],
   preguntas: [],
@@ -97,6 +128,9 @@ Más el contenido de cada artículo a investigar, se debe responder lo siguiente
   pagebreak()
   heading(título, level: 1)
   text(style: "italic")[Palabras clave de búsqueda: #palabras-clave [#fuente]]
+
+  heading([Ficha de Lectura de Artículo Científico], level: 2)
+  tabla-ficha
 
   heading([Objetivos y Preguntas de Investigación], level: 2)
   heading([Objetivo Principal del Artículo], level: 3)
@@ -154,6 +188,13 @@ Más el contenido de cada artículo a investigar, se debe responder lo siguiente
   título: [Artículo 1: A systematic literature review of Total Quality Management (TQM) implementation in the organization~@Permana_Purba_Rizkiyah_2021],
   palabras-clave: [Total Quality Management (TQM)],
   fuente: [Google Academy],
+  tabla-ficha: ficha(
+    título: [A systematic literature review of Total Quality Management (TQM) implementation in the organization],
+    autores: cite(<Permana_Purba_Rizkiyah_2021>, form: "author"),
+    año: cite(<Permana_Purba_Rizkiyah_2021>, form: "year"),
+    fuente: [Google Academy (_Total Quality Management (TQM)_), International Journal of Advanced Science and Technology, 9(1), 25--36],
+    caption: [Ficha de Lectura del Artículo 1],
+  ),
   objetivo: [
 El objetivo principal del artículo es evaluar la relevancia y efectividad del concepto de Gestión de Calidad Total (TQM) en la mejora del rendimiento empresarial y la satisfacción del cliente en el entorno empresarial actual. Para ello, los autores realizan una revisión sistemática de la literatura sobre la implementación del TQM en diversas industrias.
 
@@ -260,6 +301,13 @@ En respuesta a la pregunta de investigación sobre los beneficios y problemas de
   título: [Artículo 2: IMPACTO DE TOTAL QUALITY MANAGEMENT EN EL DESEMPEÑO ORGANIZATIVO~@TORRES_SANTA_CRUZ2019],
   palabras-clave: [Total Quality Management],
   fuente: [SciELO],
+  tabla-ficha: ficha(
+    título: [IMPACTO DE TOTAL QUALITY MANAGEMENT EN EL DESEMPEÑO ORGANIZATIVO],
+    autores: cite(<TORRES_SANTA_CRUZ2019>, form: "author"),
+    año: cite(<TORRES_SANTA_CRUZ2019>, form: "year"),
+    fuente: [SciELO (_Total Quality Management_), Investigación & Desarrollo, 19, 43--58],
+    caption: [Ficha de Lectura del Artículo 2],
+  ),
   objetivo: [
 El objetivo principal del artículo es verificar empíricamente cómo la adopción de los principios y prácticas de Total Quality Management (TQM) influye en el desempeño organizativo. Para ello, se utiliza la visión dinámica del Enfoque Basado en Competencias (EBC) para analizar cómo las organizaciones desarrollan capacidades específicas y regeneran competencias distintivas.
 
@@ -374,6 +422,13 @@ En respuesta a la pregunta de investigación sobre los beneficios y problemas de
   título: [Artículo 3: Energy management and power quality improvement of microgrid system through modified water wave optimization~@CHOUDHURY20236020],
   palabras-clave: [Quality improvement strategies],
   fuente: [DOAJ],
+  tabla-ficha: ficha(
+    título: [Energy management and power quality improvement of microgrid system through modified water wave optimization],
+    autores: cite(<CHOUDHURY20236020>, form: "author"),
+    año: cite(<CHOUDHURY20236020>, form: "year"),
+    fuente: [DOAJ (_Quality improvement strategies_), Energy Reports, 9, 6020--6041],
+    caption: [Ficha de Lectura del Artículo 3],
+  ),
   objetivo: [
 El objetivo principal del artículo es mejorar la gestión energética y la calidad de potencia en un sistema de microredes integrado por celdas de combustible, baterías y supercapacitores. Para lograrlo, propone un algoritmo de Optimización de Ondas de Agua Modificado (MWWO) para ajustar dinámicamente los parámetros del controlador proporcional-integral (PI).
 
@@ -488,6 +543,13 @@ Estos pasos permitirán una comprensión integral de cómo el TQM puede benefici
   título: [Artículo 4: Estudo de caso em uma empresa do setor madeireiro do Alto Paranaíba: uma proposta de implementação da gestão da qualidade total e da gestão da rotina / Quality management and current approaches: a case study in a logging company located in the Alto Paranaíba~@Ananias_Grossi_Peixoto_Mendonça_Melo_Barbosa_2020],
   palabras-clave: [Problemas de implementação do TQM],
   fuente: [Google Academy],
+  tabla-ficha: ficha(
+    título: [Estudo de caso em uma empresa do setor madeireiro do Alto Paranaíba: uma proposta de implementação da gestão da qualidade total e da gestão da rotina],
+    autores: cite(<Ananias_Grossi_Peixoto_Mendonça_Melo_Barbosa_2020>, form: "author"),
+    año: cite(<Ananias_Grossi_Peixoto_Mendonça_Melo_Barbosa_2020>, form: "year"),
+    fuente: [Google Academy (_Problemas de implementação do TQM_), Brazilian Journal of Business, 2(2), 965--978],
+    caption: [Ficha de Lectura del Artículo 4],
+  ),
   objetivo: [
 El objetivo principal del artículo es *identificar características de la gestión de la calidad total (TQM) y del Gerenciamento de la Rotina do Dia-a-Dia (GRD)* en una empresa del sector madeireiro situada en la región del Alto Paranaíba. Se busca *proponer mejoras* mediante la aplicación del GRD, enfocándose en el proceso de producción del principal producto de la empresa, la puerta, para *fomentar la mejora continua* y la participación de los empleados en la búsqueda de la calidad en todas las etapas de los procesos.
     ],
@@ -591,6 +653,13 @@ Estos puntos resumen cómo el artículo aborda la pregunta de investigación, de
   título: [Artículo 5: Identifying critical assumptions and risks in air quality management planning using Theory of Change approach~@PHATHUTSHEDDZO_2024],
   palabras-clave: [Quality management challenges],
   fuente: [SciELO],
+  tabla-ficha: ficha(
+    título: [Identifying critical assumptions and risks in air quality management planning using Theory of Change approach],
+    autores: cite(<PHATHUTSHEDDZO_2024>, form: "author"),
+    año: cite(<PHATHUTSHEDDZO_2024>, form: "year"),
+    fuente: [SciELO (_Quality management challenges_), Clean Air Journal, 34, 1--19],
+    caption: [Ficha de Lectura del Artículo 5],
+  ),
   objetivo: [
 El artículo tiene como objetivo *identificar las suposiciones críticas y los riesgos* en la planificación de la gestión de la calidad del aire utilizando el enfoque de la *Teoría del Cambio (ToC)*. Se enfoca en evaluar la *eficacia de los Planes de Gestión de la Calidad del Aire (AQMP)* como instrumento de política, específicamente en el contexto de Sudáfrica, para abordar los desafíos de calidad del aire en áreas prioritarias.
 
