@@ -297,6 +297,9 @@ En respuesta a la pregunta de investigación sobre los beneficios y problemas de
   ],
 )
 
+== 14 Puntos de Deming
+
+
 #artículo(
   título: [Artículo 2: IMPACTO DE TOTAL QUALITY MANAGEMENT EN EL DESEMPEÑO ORGANIZATIVO~@TORRES_SANTA_CRUZ2019],
   palabras-clave: [Total Quality Management],
