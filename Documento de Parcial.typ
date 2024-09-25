@@ -169,7 +169,7 @@ Deming propuso 14 puntos de mejora para lograr un éxito en la gestión de la ca
 == 14 puntos de Deming~
 Los 14 puntos de Deming son principios fundamentales para la mejora de la calidad y la gestión eficaz de una organización.
 
-Mencionado por el Dr. Deming en #quote([My 14 Points for Management follow naturally as application of the System of Profound Knowledge for transformation from the present style of management to one of optimization.], attribution: [The New Economics])
+Mencionado por el Dr. Deming, #quote([My 14 Points for Management follow naturally as application of the System of Profound Knowledge for transformation from the present style of management to one of optimization.], attribution: [The New Economics])
 
 Se definen los siguientes puntos~@Deming_14, de parte de Deming, W. Edwards. _Out of The Crisis (MIT Press) (pp. 23--24)_.
 
